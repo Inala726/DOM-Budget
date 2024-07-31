@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>Budget Tracker</title>
+  </head>
+  <body>
+    <div class="h3"><h1>Budget Management System</h1></div>
+    <div class="wrapper">
+      <div class="cont">
+        <div class="sub-cont">
+          <!-- Budget -->
+          <div class="tac">
+            <h3>Budget</h3>
+            <p class="hide error" id="budget-error">
+              Value can't be empty or negative
+            </p>
+            <input
+              type="number"
+              id="total-amount"
+              placeholder="Enter Total Amount"
+            />
+            <button class="submit" id="total-amount-button">Set Budget</button>
+          </div>
+
+          <!-- Expenditure -->
+          <div class="uac">
+            <h3>Expenses</h3>
+            <p class="hide error" id="product-title-error">
+              Value can't be empty
+            </p>
+            <input
+              type="text"
+              id="product-title"
+              placeholder="Enter product title"
+            />
+
+            <input
+              type="number"
+              id="user-amount"
+              placeholder="Enter product cost"
+            />
+            <button class="submit" id="check-amount">Add Expense</button>
+          </div>
+        </div>
+        <!--Output  -->
+
+        <div class="output flex-space">
+          <div class="">
+            <p>Total Budget</p>
+            <span id="amount">0</span>
+          </div>
+          <div class="">
+            <p>Expenses</p>
+            <span id="expenditure">0</span>
+          </div>
+          <div class="">
+            <p>Balance</p>
+            <span id="balance">0</span>
+          </div>
+        </div>
+      </div>
+      <!-- List -->
+      <div class="list">
+        <h3>Expense List</h3>
+        <div class="list-cont" id="list"></div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="./app.js"></script>
+  </body>
+</html>
